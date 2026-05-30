@@ -99,7 +99,7 @@ input:focus-visible,
   padding-inline: var(--gutter);
 }
 
-.section { padding-block: clamp(4rem, 9vw, 8rem); }
+.section { padding-block: clamp(3rem, 7vw, 5rem); }
 .section--tight { padding-block: clamp(3rem, 6vw, 5rem); }
 .section--alt { background: var(--bg-alt); border-block: 1px solid var(--line); }
 
