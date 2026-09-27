@@ -260,7 +260,7 @@ input:focus-visible,
   color: var(--white);
   background:
     linear-gradient(180deg, rgba(20,33,61,0.72) 0%, rgba(0,0,0,0.78) 100%),
-    url("../hero.jpg") center/cover no-repeat;
+    url("../images/hero.jpg") center/cover no-repeat;
 }
 .hero-inner { padding-block: 5rem; max-width: 960px; }
 .hero-wave { font-size: 1.5rem; letter-spacing: 0.6rem; margin-bottom: 1.25rem; }
@@ -353,6 +353,9 @@ input:focus-visible,
 .card-outcome { color: var(--muted); }
 .card-foot { margin-top: auto; padding-top: 0.5rem; }
 
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: 1fr; }  /* three columns get cramped on tablets */
+}
 @media (max-width: 720px) {
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
 }

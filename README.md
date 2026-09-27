@@ -11,14 +11,25 @@ Live at: https://charcharbean.github.io
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home — photo hero, impact metrics, featured case studies, about teaser |
-| `case-studies.html` | Listing of case studies (SensoryGen, Sensiply) |
-| `case-study-sensorygen.html` | SensoryGen case study in "executive deck" format (copy this for new projects) |
+| `index.html` | Home — photo hero, impact metrics, Featured Work cards, about teaser |
+| `case-studies.html` | The "Work" page (file name kept so shared links still work) |
+| `work-nemko.html` | Nemko job page (copy this for new jobs) |
+| `case-study-sensorygen.html` | SensoryGen case study (copy this for new projects) |
 | `case-study-sensiply.html` | Sensiply case study |
-| `about.html` | About / résumé — narrative, experience timeline, honors, education, skills |
+| `about.html` | About — bio, experience timeline, honors, education, skills |
 | `insights.html` | Insights — currently a "coming soon" page |
 | `css/style.css` | The whole design system (colors, type, components) |
 | `js/main.js` | Mobile navigation toggle |
+
+## Folder layout
+
+```
+*.html                       pages (must stay at the top level for GitHub Pages URLs)
+css/  js/                    styles and scripts
+images/                      every image the site displays
+images/originals/            source photos and logos (not shown directly on the site)
+Charles-Russell-Resume.pdf   linked from every Résumé button
+```
 
 ## Design system
 
@@ -28,28 +39,19 @@ Live at: https://charcharbean.github.io
 
 To re-skin the entire site, edit the CSS variables in the `:root` block at the top of `css/style.css`.
 
-## What's still left to fill in
+## Adding work
 
-Most of the site is populated from the résumé. The remaining `[bracketed]` placeholders (highlighted
-in amber on the page) are:
+To add a job or project, copy `work-nemko.html` (jobs) or `case-study-sensorygen.html` (projects), then
+add a card for it in `index.html` and `case-studies.html`.
 
-1. **Case study content** — `case-study-sensorygen.html` and `case-study-sensiply.html` have the full
-   deck structure ready, but the narrative sections (challenge, approach, insights) are placeholders.
-   Drop in your real write-ups when ready.
-2. **About page** — the AVID Tutor dates/description, and the optional personal line in the bio.
-3. **Project thumbnails** — the two case-study cards still use grayscale `picsum.photos` placeholders
-   (see below to swap in real images).
+## Images
 
-To add a **new** case study later, copy `case-study-sensorygen.html` to a new file and link it from the
-cards in `index.html` and `case-studies.html`.
+All site images live in `images/`; originals go in `images/originals/`.
 
-## Replacing the placeholder images
-
-- **Hero** — already uses your `hero.jpg` (a web-optimized 1920px copy of `Hawaii Photo.jpeg`). To change
-  it, set a new file and update the `url("../hero.jpg")` line in `.hero` in `css/style.css`.
-- **Headshot** — already uses `Headshot Image Website.JPG` on the About page.
-- **Project thumbnails** — still `picsum.photos` placeholders. Replace the `src="https://picsum.photos/..."`
-  attributes in `index.html` and `case-studies.html` with your own images (keep the `alt` text accurate).
+- **Hero** — `images/hero.jpg`, a web-optimized 1920px copy of `images/originals/Hawaii Photo.jpeg`.
+  Set in the `.hero` rule in `css/style.css`.
+- **Headshot** — `images/Headshot Image Website.JPG` on the About page.
+- **Card thumbnails** — `images/*-thumb.jpg`, 1000×625 (16:10) so they fill the cards without distortion.
 
 ## Preview locally
 
